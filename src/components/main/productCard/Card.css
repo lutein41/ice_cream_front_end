@@ -1,0 +1,26 @@
+.card {
+  margin-right: 20px;
+  margin-bottom: 35px;
+}
+
+.card-img-top {
+  height: 280px;
+  width: 190px;
+  margin-left: 40px;
+}
+
+.card-title {
+  text-align: center;
+  height: 80px;
+  overflow: hidden;
+}
+.rating {
+  display: flex;
+  height: 30px;
+  justify-content: center;
+  align-items: flex-center;
+}
+
+.add-to-cart {
+  margin-left: 25%;
+}

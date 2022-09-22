@@ -1,0 +1,33 @@
+.table {
+  width: 800px;
+}
+
+.product.data {
+  width: 250px;
+  overflow: hidden;
+}
+
+.quantity.data {
+  width: 120px;
+}
+
+.remove.data {
+  width: 100px;
+}
+
+.price.data {
+  width: 120px;
+}
+
+.cart-table-header {
+  width: 80px;
+}
+
+#cart-quantity {
+  width: 30px;
+  margin-right: 10px;
+}
+
+.cart-quantity {
+  width: 40px;
+}

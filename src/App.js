@@ -1,24 +1,34 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Header from './components/header/Header.js'; 
+import Main from './components/main/Main.js'; 
+import Cart from './components/cart/Cart.js';
+import Checkout from './components/checkout/CheckOut.js';
+import {useState}from 'react';
+import {CartProvider} from './context/cartItemContext.js';
 
 function App() {
+
+  const [displayCart, setDisplayCart] = useState(false);
+  const [displayCheckout, setDisplayCheckout] = useState(false);
+
+  function displayCartHandler(e){
+    setDisplayCart( x => !x);
+  }
+
+  function displayCheckOutHandler(e){
+    setDisplayCheckout( x=>!x);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <CartProvider> 
+        {displayCart && <Cart displayCart={displayCartHandler} displayCheckout={displayCheckOutHandler}/>}
+        {displayCheckout && <Checkout displayCheckout={displayCheckOutHandler}/>}
+        <Header displayCart={displayCartHandler}></Header>
+        <Main></Main>
+      </CartProvider>
+    </>
   );
 }
 
